@@ -10,6 +10,3 @@ def checkStatus():
 
 checkStatus()
 
-
-##trial
-##trial2
