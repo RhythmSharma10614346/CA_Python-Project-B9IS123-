@@ -30,3 +30,25 @@ def res(messageContent):
     else: 
         TeslaDbs_message = random.choice(response["default"])
     return TeslaDbs_message
+
+    #if there something different in user question from what we give chatbot, chatbot should understand what the real question is
+
+def real(userText):
+
+    if "name" in userText:
+
+        ytext = "what's your name?"
+
+    elif "monsoon" in userText:
+
+        ytext = "what's today's weather?"
+
+    elif "how are" in userText:
+
+        ytext = "how are you?"
+
+    else:
+
+        ytext = ""
+
+    return ytext
