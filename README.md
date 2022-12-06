@@ -11,3 +11,5 @@ Template = .html files to describe the layout
 
 ## Django version 4.1.4, using settings 'mysite.settings'
 ## Starting development server at http://127.0.0.1:8000/
+# username admin
+# password admin
