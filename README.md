@@ -7,3 +7,7 @@ Model = gets data from database
 View = takes http requests as arguments
 Template = .html files to describe the layout
 # how to create a chatbot?
+
+
+## Django version 4.1.4, using settings 'mysite.settings'
+## Starting development server at http://127.0.0.1:8000/
