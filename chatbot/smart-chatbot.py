@@ -7,6 +7,7 @@ import random
 f=open('whatismentalhealth.txt', 'r', errors='ignore')
 raw_document=f.read()
 raw_document=raw_document.lower() #for converting text to lowercase
+nltk.download('omw-1.4')
 nltk.download('punkt') #for using the Punkt tokenizer
 nltk.download('wordnet') #for using the Wordnet dictionary
 sent_tokens=nltk.sent_tokenize(raw_document) #for converting document to list of sentences. We can reach the sentences by index
@@ -39,4 +40,25 @@ def hello(sentence):
         if word.lower() in Hello_Inputs:
             return random.choice(Hello_Outputs)
 
+
+#Tf is for term frequency(How many times all the words each individual word is repeated in the corpus) 
+#Idf is for inverse document frequency(how rare is the occurence of the word in the corpus)
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+def response(user_response):
+    chatbot_response=''
+    TfidfVec=TfidfVectorizer(tokenizer=LemmaNormalize, stop_words='english')
+    tfidf=TfidfVec.fit_transform(sent_tokens)
+    vals=cosine_similarity(tfidf[-1], tfidf)
+    idx=vals.argsort()[0][-2]
+    flat=vals.flatten() 
+    flat.sort()
+    req_tfidf=flat[-2]
+    if(req_tfidf==0): #When type in sth your chatbot doesnt understand
+        chatbot_response=chatbot_response+"I am sorry! I do not understand you"
+        return chatbot_response
+    else:
+        chatbot_response=chatbot_response+sent_tokens[idx]
+        return chatbot_response
 
