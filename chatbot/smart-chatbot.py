@@ -27,3 +27,16 @@ def LemmaTokens(tokens):
 remove_punctuation_dict=dict((ord(punct), None) for punct in string.punctuation)
 def LemmaNormalize(text):
     return LemmaTokens(nltk.word_tokenize(text.lower().translate(remove_punctuation_dict))) 
+
+
+#Beginning part should have 'given words' that is going to be used randomly
+#Hello function defining
+Hello_Inputs=('hi', 'hello', 'how are you', 'hey', "what's up", 'are you here')
+Hello_Outputs=('hi', 'hey', 'hello', 'happy to see you', 'hi thanks for talking to me')
+
+def hello(sentence):
+    for word in sentence.split():
+        if word.lower() in Hello_Inputs:
+            return random.choice(Hello_Outputs)
+
+
