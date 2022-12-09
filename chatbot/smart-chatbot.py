@@ -1,3 +1,7 @@
+#Users can ask general questions about mental health. Smart chatbot can provide some information to users by searching articles. 
+#Articals have already given in txt file to chatbot.
+#Users can use some keywords like 'early warnings', 'smoking', 'biological factors', 'hearing voice' etc.
+
 import numpy as np 
 import nltk
 import string
