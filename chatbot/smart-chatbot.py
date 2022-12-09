@@ -66,3 +66,26 @@ def response(user_response):
         chatbot_response=chatbot_response+sent_tokens[idx]
         return chatbot_response
 
+#How to start conversation and how to end 
+keep_talking=True
+print("Smart ChatBot: Hey! I am Smart Bot. Do you want to learn about MENTAL HEALTH? Let's ask me! If you want to exit, just type Bye")
+while(keep_talking==True):
+    user_response=input()
+    user_response=user_response.lower()
+    if(user_response!='bye'): 
+        if(user_response=='thanks' or user_response=='thank you'):
+            keep_talking=False
+            print("Smart ChatBot: It was pleasure for me..")
+        else:                                                               #else>>if user_response is any hello word which chatbot knows
+            if(hello(user_response)!=None):
+                print("Smart ChatBot:"+hello(user_response))
+            else:                                                           #else>>if user_response is not 'bye' or is not 'thanks' or is not 'hello'
+                sent_tokens.append(user_response)
+                word_tokens=word_tokens+nltk.word_tokenize(user_response)
+                final_words=list(set(word_tokens))
+                print("Smart ChatBot: ",end="")
+                print(response(user_response))
+                sent_tokens.remove(user_response)
+    else:                                                                   #else>>if user_response is "bye"
+        keep_talking=False
+        print("Smart ChatBot: Thanks for asking, bye! Take care")
