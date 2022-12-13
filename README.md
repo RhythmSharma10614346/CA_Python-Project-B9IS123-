@@ -6,3 +6,4 @@ Learning Django from W3schools.
 Model = gets data from database
 View = takes http requests as arguments
 Template = .html files to describe the layout
+# starting talkative chatbot 
