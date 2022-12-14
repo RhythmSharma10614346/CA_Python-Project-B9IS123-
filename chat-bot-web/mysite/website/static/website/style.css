@@ -1,4 +1,10 @@
+
 body{
+  padding: 0;
+  border: 0;
+  margin: 0;
+  display: block;
+  position: relative;
 	background-color: beige;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: medium;
@@ -7,11 +13,25 @@ body{
 
 h1{
   font-weight: 400;
+
 	color:rgb(53, 124, 247);
     
 }
 
 
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #177126;
+  color: white;
+  font-size: 40px;
+}
+
+.banner {
+  display: inline-block;
+  width: auto;
+  height: 600px;
+}
 
 .card-bordered {
   border: 1px solid #ebebeb;
