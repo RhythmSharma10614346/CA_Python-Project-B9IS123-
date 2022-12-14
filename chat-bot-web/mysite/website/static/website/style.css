@@ -20,9 +20,10 @@ h1{
 .header {
   padding: 60px;
   text-align: center;
-  background: #177126;
+  background: #226f3b;
   color: white;
   font-size: 40px;
+  background-image: url(\mysite\website\static\website\img\banner.gif);
 }
 
 .banner {
