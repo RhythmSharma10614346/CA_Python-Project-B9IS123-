@@ -82,6 +82,7 @@ If you aim the right audience, you will know how to solve one problem in the bes
 Model = gets data from database
 View = takes http requests as arguments
 Template = .html files to describe the layout
+# starting talkative chatbot 
 # how to create a chatbot?
 
 
