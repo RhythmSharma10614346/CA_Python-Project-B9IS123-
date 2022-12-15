@@ -14,15 +14,15 @@ body{
 h1{
   font-weight: 400;
 
-	color:rgb(247, 53, 176);
+	color:rgb(255, 255, 255);
     
 }
 
 
 .header {
-  padding: 40px;
+  padding: 100px;
   text-align: center;
-  background: #226f3b;
+  background: #096efd;
   color: white;
   font-size: 40px;
   background-size: contain;
