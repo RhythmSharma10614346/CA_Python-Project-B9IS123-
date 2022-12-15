@@ -18,18 +18,18 @@ h1{
 }
 
 .header {
-  padding: 60px;
+  padding: 40px;
   text-align: center;
   background: #226f3b;
   color: white;
   font-size: 40px;
-  background-image: url(\mysite\website\static\website\img\banner.gif);
+  background-size: contain;
 }
 
 .banner {
   display: inline-block;
   width: auto;
-  height: 600px;
+  height: 400px;
 }
 
 .card-bordered {
