@@ -2,9 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
 import json
-import chatbot
-from chatbot import get_resposne
-
+from chatbot import chatbot_response
 def index(request):
    return render(request, 'index.html', {})
  
@@ -16,5 +14,5 @@ def smartchatbot(request):
  
 def sendmessage(request):
    user_message=request.POST["mymessage"]
-   print(str(get_response(user_message)))
-   return JsonResponse({"message":str(get_response(user_message))})
+   print(str(chatbot_response(user_message)))
+   return JsonResponse({"message":str(chatbot_response(user_message))})
