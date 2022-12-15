@@ -14,23 +14,24 @@ body{
 h1{
   font-weight: 400;
 
-	color:rgb(53, 124, 247);
+	color:rgb(247, 53, 176);
     
 }
 
 
 .header {
-  padding: 60px;
+  padding: 40px;
   text-align: center;
-  background: #177126;
+  background: #226f3b;
   color: white;
   font-size: 40px;
+  background-size: contain;
 }
 
 .banner {
   display: inline-block;
   width: auto;
-  height: 600px;
+  height: 400px;
 }
 
 .card-bordered {
