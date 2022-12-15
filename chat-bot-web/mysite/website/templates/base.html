@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 
 <html lang="en">
@@ -27,14 +29,48 @@
     <h1>Chatbots</h1>
     <p>Get the conversation started</p>
   </div>
-  <div class="banner">
-    {% load static %}
-    <img src="/chat-bot-web/mysite/website/static/website/img/banner.gif" />
+  {% block content %}
+  <div class="container mt-3">
+    <h3>Type 1</h3>
+    <p>Question-Answer based</p>
+    
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+      Chat
+    </button>
   </div>
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Chatbot1</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          It is the one that is used to interact with the end customer via a predefined knowledge base and technical abilities that can capably respond to fixed instructions only.
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+  
 
 
+
+<!--json for smart chatbot-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
+<!--bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
@@ -69,7 +105,7 @@
 
           $("#messagebox").val("");
 
-          $.post('http://localhost:8000/sendmessage', { mymessage: message }, function (response) {
+          $.post('http://localhost:8000/smartchatbot', { mymessage: message }, function (response) {
 
             console.log(response);
 
