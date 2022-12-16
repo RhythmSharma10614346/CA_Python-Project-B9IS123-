@@ -6,6 +6,9 @@ import numpy as np
 import nltk
 import string
 import random
+import datetime
+from datetime import date
+
 
 
 #import and read the corpus
@@ -34,6 +37,11 @@ remove_punctuation_dict=dict((ord(punct), None) for punct in string.punctuation)
 def LemmaNormalize(text):
     return LemmaTokens(nltk.word_tokenize(text.lower().translate(remove_punctuation_dict))) 
 
+
+# get current date
+datetime_object = datetime.now()
+print(datetime_object)
+print('Type :- ',type(datetime_object))
 
 #Beginning part should have 'given words' that is going to be used randomly
 #Hello function defining
