@@ -7,6 +7,7 @@ import nltk
 import string
 import random
 
+
 #import and read the corpus
 f=open('whatismentalhealth.txt', 'r', errors='ignore')
 raw_document=f.read()
