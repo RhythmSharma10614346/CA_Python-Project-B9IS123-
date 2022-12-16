@@ -1,5 +1,57 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Chatbots</h1>
+<div class="header">
+  <h1>Chatbots</h1>
+  <p>Get the conversation started</p>
+</div>
+
+
+<div class="container mt-4">
+  <h2>Types of Chatbots</h2>
+  <div class="mt-4 p-5 bg-success text-white rounded">
+    <h1>Decision Tree Chatbot:</h1>
+    <p>This type of chatbot walks users through a decision tree in order to answer their questions.
+      The user's responses are used to narrow down the possible answers.</p>
+    <p>Decision tree chatbots work by asking the user a series of questions in order to determine the user's intent. The questions are arranged in a tree-like structure, with each node representing a different question. The decision tree is created by a human programmer, and the chatbot uses the tree structure to determine which questions to ask and how to respond to the user's answers.
+         Based on the user's answers, the chatbot can then provide an appropriate response or take the user down a different branch of the decision tree.</p>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="mt-4 p-5 bg-primary text-white rounded">
+    <h1>Generative Chatbot:</h1>
+    <p>This type of chatbot uses artificial intelligence (AI) to generate new responses.
+      It will use the user's input to generate an appropriate response based on the information provided.</p>
+      <p>
+        A generative chatbot works by using natural language processing (NLP) and deep learning algorithms to generate responses to user input. The chatbot is trained using large amounts of data, including conversations from previous users. 
+        The generative chatbot then uses this data to generate its own responses, allowing it to interact with users in a more natural way.
+      </p>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="mt-4 p-5 bg-warning text-white rounded">
+    <h1>Conversational AI Chatbot:</h1>
+    <p>This type of chatbot is powered by AI and is designed to understand natural language and carry on conversations
+      with users. It can answer questions, provide recommendations, and more.</p>
+      <p>
+        The chatbot then uses AI techniques to generate a response, often with an actionable items. 
+        The chatbot does this by first analyzing the user's response, classifying what topic it is in, and doing any further analysis to determine the most appropriate response. The chatbot may then use pre-programmed phrases, search predefined databases,or mashup data from other APIs in order to generate a relevant response with the goal of helping the user complete their task.
+      </p>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="mt-4 p-5 bg-info text-white rounded">
+    <h1>Retrieval-based Chatbot:</h1>
+    <p>This type of chatbot uses pre-defined responses to answer user queries. 
+      They are usually trained on a large body of data and use natural language processing (NLP) to understand user intent. </p>
+      <p>
+        A retrieval-based chatbot works by either retrieving an exact match to the user's input from a set of pre-defined responses, or by retrieving an answer to the user's input from a large database. 
+        The bot uses various natural language processing (NLP) techniques to identify the user's intent, then it applies a predetermined algorithm to retrieve the response from the set of pre-defined responses or from a database. 
+        The bot then evaluates and modifies the response before sending it back to the user.
+      </p>
+      </div>
+</div>
 {% endblock %}
