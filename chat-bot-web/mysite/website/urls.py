@@ -7,6 +7,6 @@ urlpatterns = [
    path("about", views.about,name='about'),
    path("smartchatbot", views.smartchatbot,name='smartchatbot'),
    path("sendmessage",views.sendmessage, name="sendmessage"),
-   path("aichatbot", views.smartchatbot,name='smartchatbot'),
+   path("aichatbot", views.aichatbot,name='aichatbot'),
  
 ]
