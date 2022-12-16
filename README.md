@@ -102,4 +102,3 @@ Template = .html files to describe the layout
 
 
 #test
-# start making talkative chatbot
