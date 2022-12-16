@@ -43,65 +43,38 @@
 
 
 
-  <script>
-
     $(document).ready(function () {
-
-      $(document).on('keypress', function (e) {
-
+      $(document).on("keypress", function (e) {
         if (e.which == 13) {
-
           var message = $("#messagebox").val();
-
           var preparedmessage = `<div class="media media-chat media-chat-reverse">
-
-                 <div class="media-body">
-
-                   <p>${message}</p>
-
-                   <p class="meta"><time datetime="2018">00:12</time></p>
-
-                 </div>
-
-               </div>`;
-
+                <div class="media-body">
+                  <p>${message}</p>
+                  <p class="meta"><time datetime="2018">00:12</time></p>
+                </div>
+              </div>`;
           console.log(preparedmessage);
-
           $("#chatContent").append(preparedmessage);
-
           $("#messagebox").val("");
-
-          $.post('http://localhost:8000/smartchatbot', { mymessage: message }, function (response) {
-
-            console.log(response);
-
-            var chatbotmessage = response.message;
-
-            var preparedchatbotmessage = `<div class="media media-chat">
-
-                 <div class="media-body">
-
-                   <p>${chatbotmessage}</p>
-
-                   <p class="meta"><time datetime="2018">00:12</time></p>
-
-                 </div>
-
-               </div>`;
-
-            console.log(preparedchatbotmessage)
-
-            $("#chatContent").append(preparedchatbotmessage);
-
-          });
-
+          $.post(
+            "http://localhost:8000/sendmessage",
+            { mymessage: message },
+            function (response) {
+              console.log(response);
+              var chatbotmessage = response.message;
+              var preparedchatbotmessage = `<div class="media media-chat">
+                <div class="media-body">
+                  <p>${chatbotmessage}</p>
+                  <p class="meta"><time datetime="2018">00:12</time></p>
+                </div>
+              </div>`;
+              console.log(preparedchatbotmessage);
+              $("#chatContent").append(preparedchatbotmessage);
+            }
+          );
         }
-
       });
-
     });
-
   </script>
-
 </body>
 </html>

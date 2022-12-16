@@ -3,6 +3,8 @@ from urllib import response
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
+from chatbot.smartchatbot import response
+
 
 def index(request):
    return render(request, 'index.html', {})
@@ -15,8 +17,9 @@ def smartchatbot(request):
  
 def sendmessage(request):
    user_message=request.POST["mymessage"]
-   print(user_message)
-   return JsonResponse({"message":str(response.message)})
+   
+   print("test ::::" + str(response(user_message)))
+   return JsonResponse({"message":str(response(user_message))}, safe=False)
 
 def aichatbot(request):
    return render(request, 'aichatbot.html', {})
