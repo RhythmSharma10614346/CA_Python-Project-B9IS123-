@@ -73,7 +73,7 @@
 
           $("#messagebox").val("");
 
-          $.post('http://localhost:8000/sendmessage', { mymessage: message }, function (response) {
+          $.post('http://localhost:8000/smartchatbot', { mymessage: message }, function (response) {
 
             console.log(response);
 
