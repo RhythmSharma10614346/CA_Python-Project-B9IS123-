@@ -13,17 +13,10 @@
             <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}">About us</a>
+            <a class="nav-link" href="{% url 'aichatbot' %}">AI bot</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-              Start Conversation
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{% url 'smartchatbot' %}">Smart Chatbot</a></li>
-              <li><a class="dropdown-item" href="#">AI Bot</a></li>
-              <li><a class="dropdown-item" href="#">Hybrid Chatbot</a></li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'smartchatbot' %}">Smart Chatbot</a>
           </li>
         </ul>
         <form class="d-flex" role="search">

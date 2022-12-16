@@ -27,13 +27,13 @@
 
 <body>
   {% include 'navbar.html' %}
-  
+
   {% block content %}
   <div class="header">
     <h1>Chatbots</h1>
     <p>Get the conversation started</p>
   </div>
-  
+
   {% endblock %}
 
   <!--json for smart chatbot-->
@@ -43,67 +43,73 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
 
+    <script>
 
+      $(document).ready(function () {
 
-    $(document).ready(function () {
-      $(document).on("keypress", function (e) {
-        if (e.which == 13) {
-          var message = $("#messagebox").val();
-          var preparedmessage = `<div class="media media-chat media-chat-reverse">
-                <div class="media-body">
-                  <p>${message}</p>
-                  <p class="meta"><time datetime="2018">00:12</time></p>
-                </div>
-              </div>`;
-          console.log(preparedmessage);
-          $("#chatContent").append(preparedmessage);
-          $("#messagebox").val("");
-<<<<<<< HEAD
-          $.post(
-            "http://localhost:8000/sendmessage",
-            { mymessage: message },
-            function (response) {
-              console.log(response);
-              var chatbotmessage = response.message;
-              var preparedchatbotmessage = `<div class="media media-chat">
-                <div class="media-body">
-                  <p>${chatbotmessage}</p>
-                  <p class="meta"><time datetime="2018">00:12</time></p>
-                </div>
-              </div>`;
-              console.log(preparedchatbotmessage);
-              $("#chatContent").append(preparedchatbotmessage);
-            }
-          );
-=======
+        $(document).on("keypress", function (e) {
 
-          $.post('http://localhost:8000/smartchatbot', { mymessage: message }, function (response) {
+          if (e.which == 13) {
 
-            console.log(response);
+            var message = $("#messagebox").val();
 
-            var chatbotmessage = response.message;
+            var preparedmessage = `<div class="media media-chat media-chat-reverse">
 
-            var preparedchatbotmessage = `<div class="media media-chat">
+                  <div class="media-body">
 
-                 <div class="media-body">
+                    <p>${message}</p>
 
-                   <p>${chatbotmessage}</p>
+                    <p class="meta"><time datetime="2018">00:12</time></p>
 
-                   <p class="meta"><time datetime="2018">00:12</time></p>
+                  </div>
 
-                 </div>
+                </div>`;
 
-               </div>`;
+            console.log(preparedmessage);
 
-            console.log(preparedchatbotmessage)
+            $("#chatContent").append(preparedmessage);
 
-            $("#chatContent").append(preparedchatbotmessage);
+            $("#messagebox").val("");
 
-          });
+            $.post(
 
-        }
+              "http://localhost:8000/sendmessage",
+
+              { mymessage: message },
+
+              function (response) {
+
+                console.log(response);
+
+                var chatbotmessage = response.message;
+
+                var preparedchatbotmessage = `<div class="media media-chat">
+
+                  <div class="media-body">
+
+                    <p>${chatbotmessage}</p>
+
+                    <p class="meta"><time datetime="2018">00:12</time></p>
+
+                  </div>
+
+                </div>`;
+
+                console.log(preparedchatbotmessage);
+
+                $("#chatContent").append(preparedchatbotmessage);
+
+              }
+
+            );
+
+          }
+
+        });
+
       });
-    });
-  </script>
+
+    </script>
 </body>
+
 </html>
