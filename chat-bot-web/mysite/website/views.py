@@ -4,7 +4,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
 from chatbot.smartchatbot import response
-
+from chatbot.aichatbot import response
 from chatbot.chatty import response
 
 def index(request):
