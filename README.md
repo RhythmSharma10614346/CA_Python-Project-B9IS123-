@@ -213,7 +213,6 @@ I took the responsibilities of creating Talkative AI chatbot. I trained the chat
 
 
 
-Conclusion
 
 
 
