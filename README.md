@@ -1,38 +1,30 @@
-Different types of chatbots.
+# Different types of chatbots.
 AI, Mental Health Chat Bot Service and General.
 
-
-B9IS123 Programming for Information Systems
+# B9IS123 Programming for Information Systems
 (B9IS123_2223_TMD1S)
 
 
-Lecturers:
+# Lecturers:
 Paul Laird
 Amit Sharma
 
 
-Group Members:
-Rhythm Sharma
-Kailash Kamalkumar Khatwani
-Tuba Tosunoglu 
-Marouan Alouache
+## Group Members:
+#Rhythm Sharma_10614346
+#Kailash Kamalkumar Khatwan_10625416
+#Tuba Tosunoglu_10625974
+#Marouan Alouache_10623355
 
 
-
-# CA_Python-Project-B9IS123-
 Creating a webiste with Chatbot using python
 # Decided to use Django, as it is a very helpfull framework of python. 
 Learning Django from W3schools.
 
-
-
 # Content Notes
 
 
-# What are the benefits of chatbots?
-
-
-
+What are the benefits of chatbots?
 
 Chatbots look like a cool thing to play around with.
 But what is the target of chatbots? Why do companies use bot assistants instead of offering a more human customer service?
@@ -51,8 +43,6 @@ This looks impressive. Are there any downsides to chatting bots, though?
 
 # The Most popular Chatbot Types
 
-
-
 1. Quick answer bots
 It is the one that is used to interact with the end customer via a predefined knowledge base and technical abilities that can capably respond to fixed instructions only.
  
@@ -69,13 +59,7 @@ These types of chatbots make personalized experiences for users. Voice enabled c
 
 Well, if users genuinely want to solve their problems, chatbots work fine. But if someone just wants to find out how to break a chatbot and is not cooperating with AI, it is easy to confuse a bot. Your virtual assistant may fall victim to mischievous users who find provoking it funny.
 
-
-
-
 # The Best User Experiences for the Best Chatbot
-
-
-
 
 1. Hook Your User
 The most basic chatbot user experience is to inform the user of your bot’s capabilities, so they know what to expect from it in the future.
@@ -109,10 +93,10 @@ Template = .html files to describe the layout
 
 ## Django version 4.1.4, using settings 'mysite.settings'
 ## Starting development server at http://127.0.0.1:8000/
-# username admin
-# password admin
+## username admin
+## password admin
 
-#Introduction
+# Introduction
 A Chatbot project is created for helping people about mental health. When we designed this project, two points are considered most: User friendly interface and natural language chatbot! These features make everything easy for people who have hoped for some help from us!!
 3 different chatbot types are modeled. Smart Chatbot, AI Chatbot and Chatty. 
 
@@ -191,7 +175,7 @@ Base page and ajax usage
 -Ajax added in base.html. Ajax has been told in the ‘Endpoint’ section in detail.
 
 
-Technologies Used:
+# Technologies Used:
 Python
 Django
 HTML
@@ -199,8 +183,10 @@ CSS
 Bootstrap
 JS
 JSON
+Ajax
+Api
 
-Liberaries and dependencies used:
+# Libraries and dependencies used:
 Numpy
 NLTK
 Scikit-Learn
@@ -208,25 +194,25 @@ Tersorflow
 pip
 
 
-Individual Contribution:
+# Individual Contribution:
 
-#[Kailash Kamalkumar Khatwani]
+# [Kailash Kamalkumar Khatwani 10625416]
 In the beginning, when we received our CA, we all were nervous regarding which topic to choose. With time, me and my group partners Ms. Rhythm sharma and Ms. Tuba Tosunoglu started working together on project after deciding the topic and I feel happy that we easily understood each other ideas and point of views and successfully completed this CA. After deciding the project, it was necessary that we distribute our roles in the overall project puzzle. 
 
 I took the responsibilities of creating Talkative AI chatbot. I trained the chatbot so that it could understand words and answer accordingly. The chatbox was then later integrated to HTML page. I helped my teammates in minimizing the errors.
 
-#[Tuba Tosunoglu]
+# [Tuba Tosunoglu 10625974]
 I have designed chatbot name Smart Bot and GUI. By using Python, HTML, CSS, Bootstrap and Jquery. Throughput the project I helped Rhythm Creating Website with Django.
 This Smartchatbot is designed for giving people general information about mental health. This is very sensitive topic and we thought it would be good to enlighten people before the service we would give. This chatbot receives some inputs from users. And it researches these inputs in a txt file which is given by us (whatismetalhealth.txt) How can chatbot scan a text properly and can find some keywords? At this point, thinking as 
 a machine is a must! A chatbot needs to understand everything word by word or sentence by sentence. We used, nltk framework  for text processing. 
 
 
-#[Rhythm Sharma]
+# [Rhythm Sharma 10614346]
 I have started searching for ideas and end up choosing this, a website about chatbots and also with chatbots using python, therefor I have used Django for initializing the project and end up creating single page for the webiste with html, css and bootstrap. Tuba helped me with Django. We have three different chatbots mentioned in navigation bar on the website. I have created Chatty by using python and html. Also helped tuba in Smart chatbot.
 
 
 
-Bibliography
+# Bibliography
 MIT, docs CC BY 3.0. ,Navbar, Available at: 
 https://getbootstrap.com/docs/5.2/components/navbar/ 
 Build your own chatbot using Python | Python Tutorial for Beginners in 2022 | Great Learning, Available at:
