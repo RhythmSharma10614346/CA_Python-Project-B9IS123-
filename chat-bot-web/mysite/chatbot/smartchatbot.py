@@ -8,6 +8,8 @@ import string
 import random
 
 
+
+
 #import and read the corpus
 f=open('whatismentalhealth.txt', 'r', errors='ignore')
 raw_document=f.read()
@@ -33,6 +35,7 @@ def LemmaTokens(tokens):
 remove_punctuation_dict=dict((ord(punct), None) for punct in string.punctuation)
 def LemmaNormalize(text):
     return LemmaTokens(nltk.word_tokenize(text.lower().translate(remove_punctuation_dict))) 
+
 
 
 #Beginning part should have 'given words' that is going to be used randomly
