@@ -1,11 +1,16 @@
 import random
 
+
+from nltk.classify import ClassifierI
+from statistics import mode
+from nltk.tokenize import word_tokenize
+
 #Each question is able to be answered in many type of way. Better user experience
 name = "Chatty Bot" 
-weather = "sunny" 
-mood = "happy"
+weather = "sunny", "rainy", "windy"
+mood = "happy", "sad"
 response = { 
-"what's your name?": [ 
+"what's your name?":[ 
 "Everybody calls me {0}".format(name), 
 "I usually go by {0}".format(name), 
 "My name is {0}".format(name) ],
@@ -30,7 +35,12 @@ def res(messageContent):
     else: 
         chattybot_message = random.choice(response["default"])
     return chattybot_message
-
+def chatty():
+    response = [
+        ("Could you please re-phrase that? "),
+                "Interesting, tell me more.", "That's fascinating.", "Wow, that's really cool.", "That sounds incredible.", "That's amazing.",][
+        random.randrange(5)]
+    return response
     #if there something different in user question from what we give chatbot, chatbot should understand what the real question is
 
 def real(userText):
