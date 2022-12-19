@@ -1,3 +1,24 @@
+Mental Health Chat Bot Service
+
+
+
+B9IS123 Programming for Information Systems
+(B9IS123_2223_TMD1S)
+
+
+Lecturers:
+Paul Laird
+Amit sharma
+
+
+Group Members:
+Rhythm Sharma
+Kailash Kamalkumar Khatwani
+Tuba Tosunoglu 
+Marouan Alouache
+
+
+
 # CA_Python-Project-B9IS123-
 Creating a webiste with Chatbot using python
 # Decided to use Django, as it is a very helpfull framework of python. 
@@ -91,6 +112,139 @@ Template = .html files to describe the layout
 # username admin
 # password admin
 
+Introduce
+A Chatbot project is created for helping people about mental health. When we designed this project, two points are considered most: User friendly interface and natural language chatbot! These features make everything easy for people who have hoped for some help from us!!
+2 different chatbot types are modeled. Smart Chatbot and Talkative Chatbot. 
+
+
+
+
+
+Smart Chatbot
+This chatbot is designed for giving people general information about mental health. 
+Since we had chosen a very sensitive topic, we thought it would be good to enlighten people before the service we would give. Thus, they can understand why they need this service and what they would have from this website with scientific aspects.
+
+
+This chatbot receives some inputs from users. And it researches these inputs in a txt file which is given by us, with some special techniques which we modeled.
+
+Talkative Chatbot 
+This chatbot is a software program for simulating intelligent conversations with human using rules or artificial intelligence. Users interact with the chatbot via conversational interface through written text. In this design, the most significant thing is being natural and keeping conversation going. Unlike smart chat bot, talkative bot should give some advice to users and ask questions in the meantime. 
+Conversation begins with shared reference. We point to objects in the world so that we and our conversational partner know that we are talking about the same things.
+
+
+Backend
+
+Technical Details:
+
+Logic of researching keywords in text file 
+How can chatbot scan a text properly and can find some keywords? At this point, thinking as a machine is a must!
+A chatbot needs to understand everything word by word or sentence by sentence. As we researched, nltk framework is found suitable for text processing. 
+
+
+Why nltk 
+Nltk is a platform for working with natural language process, it provides many libraries that we can use classification, tokenization, stemming, tagging, parsing, and semantic reasoning (https://www.nltk.org/) 
+
+
+What we used from nltk:
+•	wordnet  dictionary: wordnet helps us to read our corpus. We used the wordnet dictionary for the lemmatization process. It is important to understand what lemmatization and stemming are and why we needed it. Lemmatization takes the context and converts the word to its meaningful base form. That is called Lemma. Stemming is a process that stems or removes last few characters from a word, often leading to incorrect meanings and spelling. (https://www.analyticsvidhya.com/blog/2022/06/stemming-vs-lemmatization-in-nlp-must-know-differences/)
+•	punct dictionary: Punct  helps for dividing text into a list of sentences or a list of words so that our curpos can readable easier by chatbot. 
+sent_tokenize: Used for convert text to the list of sentences.
+word_tokenize: Used for convert text to the list of words.
+
+
+What is TfIdfVectorizer
+This is an algorithm for meaningful prediction. It is important to understand what Tf and Idf are. 
+Tf: is for term frequency(How many times all the words each individual word is repeated in the corpus) 
+Idf: is for inverse document frequency(how rare is the occurence of the word in the corpus)
+TfIdfVectorizer helps to count words into the cursor and finds how rare the word is in the cursor, giving the chatbot an idea about the importance of the word or sentence.
+
+
+……………….
+
+
+
+Endpoint
+In this project, it is necessary sending-receiving data between chat bot and users. Chat bot needs to get the user's response and post response by giving rules.
+Ajax is used for these data communication between server and html pages. Ajax dependency is added in base.html so that we can use jquery and read some data from html. 
+
+
+
+How ajax works: 
+Browser:Create and XmlHttpRequest >> Send Http request >> Server: Create a response and send data back to the browser>> Browser:Update page content
+
+
+Frontend
+During this project, We considered how we can focus on python chatbot techniques more and less spending time with website. After we researched many different frontend solutions, we decided to use Django, which provides us with the fastest solution when we create a website.
+
+
+Website is created with Django and bootstrap is implemented for designing navbar. A simple, user-friendly website design is modeled so that users can benefit from chatbot service fastest.
+
+
+Website consists of 4 different pages that are home page, about us, smart chatbot and talkative chatbot.
+
+
+About Pages And Technical Details
+
+
+Home page: Home page contains information about types of chatbots and it is created using bootstrap5 from the documentation site with help of w3schools.
+
+AI Bot and Smart chatbot page: Ready html and css template is found for chat box design and implemented in project. Source code is shared in references. We removed some features and also added some new features. It is turned out to suitable form for this project. Both pages use the same chat box template. These pages are extended from the base.html page. 
+
+
+Base page and ajax usage
+
+
+-Other pages are extended from base.html and use the <head> elements from base.
+-Navbar code is used from base.html.
+-Ajax added in base.html. Ajax has been told in the ‘Endpoint’ section in detail.
+
+
+
+
+
+Individual Contribution:
+
+In the beginning, when we received our CA, we all were nervous regarding which topic to choose. With time, me and my group partners Ms. Rhythm sharma and Ms. Tuba Tosunoglu started working together on project after deciding the topic and I feel happy that we easily understood each other ideas and point of views and successfully completed this CA. After deciding the project, it was necessary that we distribute our roles in the overall project puzzle. 
+
+I took the responsibilities of creating Talkative AI chatbot. I trained the chatbot so that it could understand words and answer accordingly. The chatbox was then later integrated to HTML page. I helped my teammates in minimizing the errors.
+
+
+
+
+
+
+Conclusion
+
+
+
+Bibliography
+MIT, docs CC BY 3.0. ,Navbar, Available at: https://getbootstrap.com/docs/5.2/components/navbar/ 
+Build your own chatbot using Python | Python Tutorial for Beginners in 2022 | Great Learning, Available at:
+https://www.youtube.com/watch?v=c_gXrw1RoKo
+What Is Mental Health? Available at:
+https://www.mentalhealth.gov/basics/what-is-mental-health 
+2022, NLTK Project, 3   Processing Raw Text, Available at:
+w.nltk.org/book_1ed/ch03.html
+2022, NLTK Project, Installing NLTK Data, Available at:
+https://www.nltk.org/data.html
+2022, NLTK Project , Sample usage for tokenize, Available at:
+https://www.nltk.org/howto/tokenize.html
+2022, NLTK Project , Sample usage for wordnet, Available at:
+https://www.nltk.org/howto/wordnet.html
+2013 - 2022 Great Learning. All rights reserved, Available at:
+https://www.mygreatlearning.com/academy?ambassador_code=GLYT_DES_c_gXrw1RoKo&utm_source=GLYT&utm_campaign=GLYT_DES_c_gXrw1RoKo
+2022 Machine Learning Mastery. All Rights Reserved. , A Gentle Introduction to the Bag-of-Words Model, Available at:
+https://machinelearningmastery.com/gentle-introduction-bag-words-model/
+2022 Section, Creating ChatBot Using Natural Language Processing in Python, Available at:
+https://www.section.io/engineering-education/creating-chatbot-using-natural-language-processing-in-python/ 
+BBBootstrap.com, Bootstrap 4 Simple chat application, Available at:
+https://bbbootstrap.com/snippets/simple-chat-application-57631463
+Copyright 2013-2022 Analytics Vidhya. Stemming vs Lemmatization in NLP: Must-Know Differences, Available at:
+https://www.analyticsvidhya.com/blog/2022/06/stemming-vs-lemmatization-in-nlp-must-know-differences/
+TF-IDF Vectorizer scikit-learn, Available at:
+https://medium.com/@cmukesh8688/tf-idf-vectorizer-scikit-learn-dbc0244a911a
+1999-2022 by Refsnes Data. All Rights Reserved., What is AJAX?, Available at:
+https://www.w3schools.com/whatis/whatis_ajax.asp
 
 
 
@@ -101,4 +255,4 @@ Template = .html files to describe the layout
 
 
 
-#test
+
